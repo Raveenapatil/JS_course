@@ -3,7 +3,7 @@
 ///////////////////////////////////////
 // Scoping in Practice
 
-/*
+
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
@@ -87,3 +87,34 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+
+
+/////////////////this key word//////////////
+// console.log(this);//return window object
+
+const age = function(birhtyr){
+  console.log(2024-birhtyr);//will give some output
+  // console.log(this);//will return undefined
+}
+age(1998);
+
+const agearrow = birhtyr =>{
+  console.log(2024-birhtyr);//will give some output
+  // console.log(this);//will return window object
+}
+agearrow(1998);
+
+const jonass= {
+  year:1990,
+  calcAge: function(){
+      console.log(this);
+    console.log(2023-this.year);
+  }
+}
+jonass.calcAge();
+
+const matilda = {
+  year:1996,
+};
+matilda.calcAge = jonass.calcAge;
+matilda.calcAge();
