@@ -118,3 +118,4 @@ const matilda = {
 };
 matilda.calcAge = jonass.calcAge;
 matilda.calcAge();
+const f =jonass.calcAge;
