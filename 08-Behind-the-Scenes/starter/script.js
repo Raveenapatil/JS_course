@@ -119,3 +119,34 @@ const matilda = {
 matilda.calcAge = jonass.calcAge;
 matilda.calcAge();
 const f =jonass.calcAge;
+
+var sfirstName= "Raveena";
+const Raveena ={
+  year:1998,
+  firstName: 'Raveena',
+  calcage: function(){
+    console.log(this);
+    console.log(this.firstName);
+
+    // const print = function(){
+    //   console.log(this);//regular function defined inside method still give undefined
+    // }
+    // print();  
+      const print = () =>{
+      console.log(this.year);//arrow function defined will check for parent scope
+    }
+    print();  
+  },
+   
+  greet:()=>{
+    console.log(this);
+    console.log(`Hey ${this.sfirstName}`)//arrow function will check for parent scope this hence undefined
+  },
+   printer : function(){
+    console.log(this);//regular function defined inside object will give output
+  }
+    
+};
+Raveena.calcage();
+Raveena.greet();
+Raveena.printer();
